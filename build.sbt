@@ -148,7 +148,6 @@ lazy val `fetch-js` = project
 lazy val tests = crossProject
   .dependsOn(core)
   .settings(commonSettings)
-  .settings(noPublishSettings)
   .configs(IntegrationTest)
   .settings(Defaults.itSettings)
   .settings(
@@ -166,11 +165,12 @@ lazy val tests = crossProject
     unmanagedResourceDirectories in Test += (baseDirectory in LocalRootProject).value / "tests" / "shared" / "src" / "test" / "resources",
     testFrameworks += new TestFramework("utest.runner.Framework")
   )
+  .jsSettings(noPublishSettings: _*)
   .jsSettings(
     scalaJSStage in Global := FastOptStage
   )
 
-lazy val testsJvm = tests.jvm.dependsOn(cache % "test")
+lazy val testsJvm = tests.jvm.dependsOn(cache)
 lazy val testsJs = tests.js.dependsOn(`fetch-js` % "test")
 
 lazy val cache = project
