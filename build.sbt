@@ -224,7 +224,10 @@ lazy val cli = project
     name := "coursier-cli",
     libraryDependencies ++= {
       if (scalaBinaryVersion.value == "2.11")
-        Seq("com.github.alexarchambault" %% "case-app" % "1.1.3")
+        Seq(
+          "com.github.alexarchambault" %% "case-app" % "1.1.3",
+          "com.github.alexarchambault" %% "argonaut-shapeless_6.2" % "1.2.0-M3"
+        )
       else
         Seq()
     },
