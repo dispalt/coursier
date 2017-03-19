@@ -776,5 +776,13 @@ for writing coursier),
 add dependencies on-the-fly ([#4](https://github.com/apache/incubator-toree/pull/4)),
 - Your project here :-)
 
+## Acknowledgements
+
+<a href="https://www.ej-technologies.com/products/jprofiler/overview.html">
+  <img src="https://www.ej-technologies.com/images/product_banners/jprofiler_medium.png">
+</a>
+
+Thanks to [JProfiler](https://www.ej-technologies.com/products/jprofiler/overview.html) for having kindly granted an [Open Source license](https://www.ej-technologies.com/buy/jprofiler/openSource)  to help for the development of coursier.
+
 
 Released under the Apache license, v2.
